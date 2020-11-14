@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.categorie.CategoryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/english_movies"
+        android:background="#FFEB3B"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar">
+
+        <fragment
+            android:id="@+id/action_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_popular_videos"
+            android:name="com.forbit.movizo.ui.main.popularVideos.PopularVideosFragment"/>
+
+        <fragment
+            android:id="@+id/romantic_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_popular_videos"
+            android:name="com.forbit.movizo.ui.main.popularVideos.PopularVideosFragment"/>
+
+        <fragment
+            android:id="@+id/horror_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_popular_videos"
+            android:name="com.forbit.movizo.ui.main.popularVideos.PopularVideosFragment"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
